@@ -64,4 +64,13 @@ export const radioPlayerInit = () => {
   audio.volume = 0.5;
 
   radioVolume.value = audio.volume * 100;
+
+  radioPlayerInit.stop = () => {
+    if(!audio.paused){
+      audio.pause();
+      radio.classList.remove('play')
+      radioStop.classList.remove('fa-stop')
+      radioStop.classList.add('fa-play')
+    } 
+  }
 }

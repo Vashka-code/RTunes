@@ -14,6 +14,10 @@ const deacivationPlayer = () => {
   playerBlock.forEach((item) => {
     item.classList.remove('active')
   })
+
+  radioPlayerInit.stop();
+  videoPlayerInit.stop();
+  musicPlayerInit.stop();
 }
 
 playerBtn.forEach((btn, index) => {
